@@ -1,1 +1,3 @@
 to lazy load you put it in the router
+
+obersables take 3 functions.  what to do with data, on error, and when done

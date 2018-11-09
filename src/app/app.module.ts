@@ -7,6 +7,8 @@ import { HeaderComponent } from './common/header/header.component';
 import { RentalComponent } from './rental/rental.component';
 import { componentFactoryName } from '@angular/compiler';
 
+import { RentalModule }  from './rental/rental.module';
+
 const routes: Routes = [
   {path: '', component: RentalComponent}
 ]
@@ -14,12 +16,12 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    RentalComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    RentalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

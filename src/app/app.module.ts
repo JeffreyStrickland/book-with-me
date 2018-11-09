@@ -1,17 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
+import { RentalComponent } from './rental/rental.component';
+import { componentFactoryName } from '@angular/compiler';
+
+const routes: Routes = [
+  {path: '', component: RentalComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    RentalComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
